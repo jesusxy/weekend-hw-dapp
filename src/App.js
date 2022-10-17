@@ -9,6 +9,7 @@ import {
 import Home from './pages/Home';
 import Results from './pages/Results';
 import Vote from './pages/Vote';
+import Delegate from './pages/Delegate';
 
 import './App.scss';
 
@@ -28,6 +29,9 @@ function App() {
               <li>
                 <Link to="/results">Results</Link>
               </li>
+              <li>
+                <Link to="/delegate">Delegate</Link>
+              </li>
             </div>
           </ul>
         </nav>
@@ -37,6 +41,7 @@ function App() {
             <Route exact path="/" element={<Home />} />
             <Route path="/vote" element={<Vote />} />
             <Route path="/results" element={<Results />} />
+            <Route path="/delegate" element={<Delegate />} />
           </Routes>
 
         </div>
