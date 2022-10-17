@@ -29,9 +29,7 @@ const Results = () => {
     
     React.useEffect(() => {
         getWinningProposal();
-
         return () => { setMessage('') };
-
     }, []);
 
     return(

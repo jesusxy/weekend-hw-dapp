@@ -20,12 +20,24 @@ import React from 'react';
 const Vote = () => {
     const [message, setMessage] = React.useState('');
     const [proposal, setProposal] = React.useState(null);
+
     
     const PROPOSALS = ["Proposal 1", "Proposal 2", "Proposal 3", "Proposal 4"];
-    
+    /**
+     * move into a file with all constants
+     */
+    const api_url = process.env.REACT_APP_API_BASE_URL;
+
+    /**
+     * TODO:
+     *  - pass proposal index as param to url
+     *  - use radio buttons to render proposals 
+     *  - use setProposal fn() to set index of selected proposal
+     * 
+     */
     const castVote = () => {
         const _proposal = proposal
-        fetch(`${process.env.REACT_APP_API_BASE_URL}/cast-vote`, {
+        fetch(`${api_url}/cast-vote`, {
             method: 'POST', // or 'PUT'
             headers: {
                 'Content-Type': 'application/json',
