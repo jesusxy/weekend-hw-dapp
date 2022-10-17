@@ -35,7 +35,7 @@ function App() {
             </div>
           </ul>
         </nav>
-        
+
         <div className={"App"}>
           <Routes>
             <Route exact path="/" element={<Home />} />
